@@ -24,6 +24,7 @@ class MasterViewController: UITableViewController, UISearchResultsUpdating {
         super.viewDidLoad()
         
         tableView.rowHeight = 70
+        updateUserInterface()
         DataServices.sharedInstance.loadInfo { (json) in
             self.filterQuake = json
             self.dislayData = self.filterQuake
@@ -32,7 +33,27 @@ class MasterViewController: UITableViewController, UISearchResultsUpdating {
        
         // Do any additional setup after loading the view, typically from a nib.
         searchBar()
-        
+    }
+    
+    // internet
+    func updateUserInterface() {
+        guard let status = Network.reachability?.status else { return }
+        switch status {
+        case .unreachable:
+            view.backgroundColor = .white
+        case .wifi:
+            view.backgroundColor = .green
+        case .wwan:
+            view.backgroundColor = .yellow
+        }
+        print("Reachability Summary")
+        print("Status:", status)
+        print("HostName:", Network.reachability?.hostname ?? "nil")
+        print("Reachable:", Network.reachability?.isReachable ?? "nil")
+        print("Wifi:", Network.reachability?.isReachableViaWiFi ?? "nil")
+    }
+    func statusManager(_ notification: Notification) {
+        updateUserInterface()
     }
     
     func searchBar() {

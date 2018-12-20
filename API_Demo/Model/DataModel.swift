@@ -28,11 +28,14 @@ class QuakeInfo {
     var longitude: String?
     var depth: String?
     
-    init(mag: Double, place: String, timeInterval: TimeInterval, url: String, detail: String) {
+    init?(mag: Double, place: String, timeInterval: TimeInterval, url: String, detail: String) {
         self.mag = mag
         self.place = place
         self.url = url
         self.detail = detail
+        
+        guard !url.isEmpty else {return nil}
+        guard !detail.isEmpty else {return nil}
         
                 if place.contains(" of ") {
                     let placeDetail = place.components(separatedBy: " of ")
@@ -45,10 +48,10 @@ class QuakeInfo {
         
         let dataForMater = DateFormatter()
         dataForMater.timeStyle = .short
-        self.timeString = dataForMater.string(from: Date(timeIntervalSince1970: timeInterval * 1/1000))
+        self.timeString = dataForMater.string(from: Date(timeIntervalSince1970: timeInterval/1000))
         dataForMater.timeStyle = .none
         dataForMater.dateStyle = .medium
-        self.dateString = dataForMater.string(from: Date(timeIntervalSince1970: timeInterval * 1/1000))
+        self.dateString = dataForMater.string(from: Date(timeIntervalSince1970: timeInterval/1000))
         
     }
     

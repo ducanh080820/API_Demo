@@ -26,6 +26,14 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func prepareForReuse() {
+        magQR.text = ""
+        place1.text = ""
+        place2.text = ""
+        time1.text = ""
+        time2.text = ""
+    }
+    
 }
 
 @IBDesignable

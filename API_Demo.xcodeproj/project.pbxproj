@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AB158421CB807B00C2940E /* QuakeRoport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57AB158221CB807B00C2940E /* QuakeRoport.xcdatamodeld */; };
+		57AB158621CB811400C2940E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB158521CB811400C2940E /* Reachability.swift */; };
 		57C1027821B5F3BD005392B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1027721B5F3BD005392B9 /* AppDelegate.swift */; };
 		57C1027A21B5F3BD005392B9 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1027921B5F3BD005392B9 /* MasterViewController.swift */; };
 		57C1027D21B5F3BD005392B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C1027B21B5F3BD005392B9 /* Main.storyboard */; };
@@ -17,25 +19,47 @@
 		57CC285321B6698B00E01D04 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC285221B6698B00E01D04 /* DataModel.swift */; };
 		57CE432521B6085E00C9FF7C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE432421B6085E00C9FF7C /* TableViewCell.swift */; };
 		57D60F5F21B90EE100D02D58 /* DetaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */; };
+		57F8FECE21C20E73002C75A9 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8FECD21C20E73002C75A9 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		57F8FED021C20E73002C75A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57C1026C21B5F3BD005392B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57C1027321B5F3BD005392B9;
+			remoteInfo = API_Demo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		57AB158321CB807B00C2940E /* QuakeRoport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuakeRoport.xcdatamodel; sourceTree = "<group>"; };
+		57AB158521CB811400C2940E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		57C1027421B5F3BD005392B9 /* API_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C1027721B5F3BD005392B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57C1027921B5F3BD005392B9 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		57C1027C21B5F3BD005392B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57C1027E21B5F3BE005392B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C1028121B5F3BE005392B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		57C1028321B5F3BE005392B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C1A21521BA675E00E066A0 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		57CC284D21B6590200E01D04 /* DataServieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServieces.swift; sourceTree = "<group>"; };
-		57CC285221B6698B00E01D04 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		57CC285221B6698B00E01D04 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataModel.swift; sourceTree = "<group>"; };
 		57CE432421B6085E00C9FF7C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaiViewController.swift; sourceTree = "<group>"; };
+		57F8FECB21C20E73002C75A9 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F8FECD21C20E73002C75A9 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		57F8FECF21C20E73002C75A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		57C1027121B5F3BD005392B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F8FEC821C20E73002C75A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				57C1027621B5F3BD005392B9 /* API_Demo */,
+				57F8FECC21C20E73002C75A9 /* Tests */,
 				57C1027521B5F3BD005392B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				57C1027421B5F3BD005392B9 /* API_Demo.app */,
+				57F8FECB21C20E73002C75A9 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,10 +94,8 @@
 				57CC285121B6682D00E01D04 /* Cotroller */,
 				57CC284F21B6681F00E01D04 /* Model */,
 				57CC285021B6682800E01D04 /* View */,
-				57C1027B21B5F3BD005392B9 /* Main.storyboard */,
 				57C1027E21B5F3BE005392B9 /* Assets.xcassets */,
 				57C1028021B5F3BE005392B9 /* LaunchScreen.storyboard */,
-				57C1028321B5F3BE005392B9 /* Info.plist */,
 			);
 			path = API_Demo;
 			sourceTree = "<group>";
@@ -89,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				57CE432421B6085E00C9FF7C /* TableViewCell.swift */,
+				57C1027B21B5F3BD005392B9 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,8 +124,19 @@
 				57C1027921B5F3BD005392B9 /* MasterViewController.swift */,
 				57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */,
 				57C1A21521BA675E00E066A0 /* SummaryTableViewController.swift */,
+				57AB158521CB811400C2940E /* Reachability.swift */,
 			);
 			path = Cotroller;
+			sourceTree = "<group>";
+		};
+		57F8FECC21C20E73002C75A9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				57F8FECD21C20E73002C75A9 /* Tests.swift */,
+				57F8FECF21C20E73002C75A9 /* Info.plist */,
+				57AB158221CB807B00C2940E /* QuakeRoport.xcdatamodeld */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +159,24 @@
 			productReference = 57C1027421B5F3BD005392B9 /* API_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		57F8FECA21C20E73002C75A9 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F8FED421C20E73002C75A9 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				57F8FEC721C20E73002C75A9 /* Sources */,
+				57F8FEC821C20E73002C75A9 /* Frameworks */,
+				57F8FEC921C20E73002C75A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57F8FED121C20E73002C75A9 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 57F8FECB21C20E73002C75A9 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -135,6 +189,10 @@
 				TargetAttributes = {
 					57C1027321B5F3BD005392B9 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					57F8FECA21C20E73002C75A9 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 57C1027321B5F3BD005392B9;
 					};
 				};
 			};
@@ -152,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				57C1027321B5F3BD005392B9 /* API_Demo */,
+				57F8FECA21C20E73002C75A9 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +223,13 @@
 				57C1028221B5F3BE005392B9 /* LaunchScreen.storyboard in Resources */,
 				57C1027F21B5F3BE005392B9 /* Assets.xcassets in Resources */,
 				57C1027D21B5F3BD005392B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F8FEC921C20E73002C75A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,11 +246,29 @@
 				57CC284E21B6590200E01D04 /* DataServieces.swift in Sources */,
 				57C1027A21B5F3BD005392B9 /* MasterViewController.swift in Sources */,
 				57C1A21621BA675E00E066A0 /* SummaryTableViewController.swift in Sources */,
+				57AB158621CB811400C2940E /* Reachability.swift in Sources */,
 				57C1027821B5F3BD005392B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57F8FEC721C20E73002C75A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F8FECE21C20E73002C75A9 /* Tests.swift in Sources */,
+				57AB158421CB807B00C2940E /* QuakeRoport.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57F8FED121C20E73002C75A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57C1027321B5F3BD005392B9 /* API_Demo */;
+			targetProxy = 57F8FED021C20E73002C75A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		57C1027B21B5F3BD005392B9 /* Main.storyboard */ = {
@@ -356,6 +440,44 @@
 			};
 			name = Release;
 		};
+		57F8FED221C20E73002C75A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/API_Demo.app/API_Demo";
+			};
+			name = Debug;
+		};
+		57F8FED321C20E73002C75A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/API_Demo.app/API_Demo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,7 +499,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		57F8FED421C20E73002C75A9 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F8FED221C20E73002C75A9 /* Debug */,
+				57F8FED321C20E73002C75A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57AB158221CB807B00C2940E /* QuakeRoport.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57AB158321CB807B00C2940E /* QuakeRoport.xcdatamodel */,
+			);
+			currentVersion = 57AB158321CB807B00C2940E /* QuakeRoport.xcdatamodel */;
+			path = QuakeRoport.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 57C1026C21B5F3BD005392B9 /* Project object */;
 }
