@@ -14,12 +14,14 @@
 		57C1027D21B5F3BD005392B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C1027B21B5F3BD005392B9 /* Main.storyboard */; };
 		57C1027F21B5F3BE005392B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C1027E21B5F3BE005392B9 /* Assets.xcassets */; };
 		57C1028221B5F3BE005392B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C1028021B5F3BE005392B9 /* LaunchScreen.storyboard */; };
-		57C1A21621BA675E00E066A0 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1A21521BA675E00E066A0 /* SummaryTableViewController.swift */; };
+		57C1A21621BA675E00E066A0 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1A21521BA675E00E066A0 /* DetailTableViewController.swift */; };
 		57CC284E21B6590200E01D04 /* DataServieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC284D21B6590200E01D04 /* DataServieces.swift */; };
 		57CC285321B6698B00E01D04 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC285221B6698B00E01D04 /* DataModel.swift */; };
-		57CE432521B6085E00C9FF7C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE432421B6085E00C9FF7C /* TableViewCell.swift */; };
-		57D60F5F21B90EE100D02D58 /* DetaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */; };
+		57CE432521B6085E00C9FF7C /* Custom Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE432421B6085E00C9FF7C /* Custom Label.swift */; };
+		57D60F5F21B90EE100D02D58 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D60F5E21B90EE100D02D58 /* WebViewController.swift */; };
 		57F8FECE21C20E73002C75A9 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8FECD21C20E73002C75A9 /* Tests.swift */; };
+		C2ECDA8822807FE6005E74D2 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA8722807FE6005E74D2 /* MasterTableViewCell.swift */; };
+		C2ECDA8B2280837D005E74D2 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA8A2280837D005E74D2 /* Enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +43,16 @@
 		57C1027C21B5F3BD005392B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57C1027E21B5F3BE005392B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C1028121B5F3BE005392B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		57C1A21521BA675E00E066A0 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		57C1A21521BA675E00E066A0 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		57CC284D21B6590200E01D04 /* DataServieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServieces.swift; sourceTree = "<group>"; };
 		57CC285221B6698B00E01D04 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataModel.swift; sourceTree = "<group>"; };
-		57CE432421B6085E00C9FF7C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaiViewController.swift; sourceTree = "<group>"; };
+		57CE432421B6085E00C9FF7C /* Custom Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Label.swift"; sourceTree = "<group>"; };
+		57D60F5E21B90EE100D02D58 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		57F8FECB21C20E73002C75A9 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F8FECD21C20E73002C75A9 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		57F8FECF21C20E73002C75A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2ECDA8722807FE6005E74D2 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		C2ECDA8A2280837D005E74D2 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				57C1027721B5F3BD005392B9 /* AppDelegate.swift */,
+				57C1027B21B5F3BD005392B9 /* Main.storyboard */,
 				57CC285121B6682D00E01D04 /* Cotroller */,
 				57CC284F21B6681F00E01D04 /* Model */,
 				57CC285021B6682800E01D04 /* View */,
+				C2ECDA8922808008005E74D2 /* Ultilities + Extension */,
 				57C1027E21B5F3BE005392B9 /* Assets.xcassets */,
 				57C1028021B5F3BE005392B9 /* LaunchScreen.storyboard */,
 			);
@@ -105,6 +111,7 @@
 			children = (
 				57CC285221B6698B00E01D04 /* DataModel.swift */,
 				57CC284D21B6590200E01D04 /* DataServieces.swift */,
+				C2ECDA8A2280837D005E74D2 /* Enum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,8 +119,7 @@
 		57CC285021B6682800E01D04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				57CE432421B6085E00C9FF7C /* TableViewCell.swift */,
-				57C1027B21B5F3BD005392B9 /* Main.storyboard */,
+				C2ECDA8722807FE6005E74D2 /* MasterTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				57C1027921B5F3BD005392B9 /* MasterViewController.swift */,
-				57D60F5E21B90EE100D02D58 /* DetaiViewController.swift */,
-				57C1A21521BA675E00E066A0 /* SummaryTableViewController.swift */,
+				57D60F5E21B90EE100D02D58 /* WebViewController.swift */,
+				57C1A21521BA675E00E066A0 /* DetailTableViewController.swift */,
 				57AB158521CB811400C2940E /* Reachability.swift */,
 			);
 			path = Cotroller;
@@ -137,6 +143,14 @@
 				57AB158221CB807B00C2940E /* QuakeRoport.xcdatamodeld */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		C2ECDA8922808008005E74D2 /* Ultilities + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				57CE432421B6085E00C9FF7C /* Custom Label.swift */,
+			);
+			path = "Ultilities + Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +255,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CC285321B6698B00E01D04 /* DataModel.swift in Sources */,
-				57CE432521B6085E00C9FF7C /* TableViewCell.swift in Sources */,
-				57D60F5F21B90EE100D02D58 /* DetaiViewController.swift in Sources */,
+				57CE432521B6085E00C9FF7C /* Custom Label.swift in Sources */,
+				57D60F5F21B90EE100D02D58 /* WebViewController.swift in Sources */,
 				57CC284E21B6590200E01D04 /* DataServieces.swift in Sources */,
+				C2ECDA8822807FE6005E74D2 /* MasterTableViewCell.swift in Sources */,
 				57C1027A21B5F3BD005392B9 /* MasterViewController.swift in Sources */,
-				57C1A21621BA675E00E066A0 /* SummaryTableViewController.swift in Sources */,
+				57C1A21621BA675E00E066A0 /* DetailTableViewController.swift in Sources */,
 				57AB158621CB811400C2940E /* Reachability.swift in Sources */,
+				C2ECDA8B2280837D005E74D2 /* Enum.swift in Sources */,
 				57C1027821B5F3BD005392B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,16 +9,15 @@
 import Foundation
 typealias JSON = Dictionary<AnyHashable, Any>
 class DataServices {
-   static var sharedInstance = DataServices()
-    var uRL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
+    static var sharedInstance = DataServices()
+    var HOST = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
     var quakeInfo: [QuakeInfo] = []
-    var arrDetail: [Any] = []
     var selectedQuake: QuakeInfo?
     
     func makeDataTaskRequest(urlString: String, completeBlock:  @escaping (JSON) -> Void) {
         guard let url = URL(string: urlString) else {return}
         let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
-        let task = URLSession.shared.dataTask(with: urlRequest) {(data, respone, error) in
+        URLSession.shared.dataTask(with: urlRequest) {(data, _, error) in
             guard error == nil else {
                 return
             }
@@ -30,15 +29,14 @@ class DataServices {
             }
             DispatchQueue.main.async {
                 completeBlock(json)
-  
+                
             }
-        }
-        task.resume()
+            }.resume()
     }
     
     func loadInfo(completeHandler: @escaping ([QuakeInfo]) -> Void) {
-       quakeInfo = []
-        makeDataTaskRequest(urlString: uRL) { [unowned self] json in
+        quakeInfo = []
+        makeDataTaskRequest(urlString: HOST) { [unowned self] json in
             guard let dictFeatures = json["features"] as? [JSON] else {return}
             for featuresJson in dictFeatures {
                 if let propertiesJson = featuresJson["properties"] as? JSON {
@@ -47,7 +45,6 @@ class DataServices {
                     }
                 }
             }
-//            print(self.quakeInfo)
             completeHandler(self.quakeInfo)
         }
     }

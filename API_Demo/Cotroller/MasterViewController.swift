@@ -8,31 +8,27 @@
 
 import UIKit
 
-
-
-class MasterViewController: UITableViewController, UISearchResultsUpdating {
+class MasterViewController: UITableViewController {
     
     var filterQuake = [QuakeInfo]()
     var dislayData = [QuakeInfo]()
     
-    let search = UISearchController(searchResultsController: nil)
-//    var quakeInfo: [QuakeInfo] = [QuakeInfo(mag: 4.7, place1: "27KM SE OF", place2: "Isangel Vanuatu", time1: "Jun 26, 2016", time2: "4:17 AM"),
-//                                  QuakeInfo(mag: 4.8, place1: "28KM SES OF", place2: "Kute Indonesia", time1: "Jun 10, 2016", time2: "1: 11 AM"),
-//                                  QuakeInfo(mag: 4.9, place1: "29KM SOS OF", place2: "Babe Thai Lan", time1: "Apr 16, 2016", time2: "9: 00 PM")]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.rowHeight = 70
+        // Do any additional setup after loading the view, typically from a nib.
         updateUserInterface()
         DataServices.sharedInstance.loadInfo { (json) in
             self.filterQuake = json
             self.dislayData = self.filterQuake
             self.tableView.reloadData()
         }
-       
-        // Do any additional setup after loading the view, typically from a nib.
-        searchBar()
+        configSearchController()
+    }
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? WebViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        destination.urlString = dislayData[indexPath.row].url
     }
     
     // internet
@@ -52,26 +48,15 @@ class MasterViewController: UITableViewController, UISearchResultsUpdating {
         print("Reachable:", Network.reachability?.isReachable ?? "nil")
         print("Wifi:", Network.reachability?.isReachableViaWiFi ?? "nil")
     }
-    func statusManager(_ notification: Notification) {
-        updateUserInterface()
-    }
     
-    func searchBar() {
-        search.searchResultsUpdater = self
-        search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Type something here to search"
-        navigationItem.searchController = search
-        search.isActive = true
+    func configSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Type something here to search"
+        navigationItem.searchController = searchController
+        searchController.isActive = true
         definesPresentationContext = true
-    }
-    
-}
-
-// MARK: - UITableViewDataSource
-
-extension MasterViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +65,6 @@ extension MasterViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
-//        configureCell(cell: cell, forRowAt: indexPath)
         let quakes = dislayData[indexPath.row]
         cell.magQR.text = String(quakes.mag)
         cell.place1.text = quakes.distainsString
@@ -89,30 +73,21 @@ extension MasterViewController {
         cell.time2.text = quakes.timeString
         return cell
     }
-    
-//    func configureCell(cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.textLabel?.text = String(indexPath.row)
-//    }
-    
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetaiViewController {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                destination.urlString = String(dislayData[indexPath.row].url)
-            }
-        }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DataServices.sharedInstance.selectedQuake = filterQuake[indexPath.row]
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / 10.0
+    }
+}
+extension MasterViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-      
         guard let searchText = searchController.searchBar.text else { return }
         dislayData = searchText.isEmpty ? (filterQuake) : (filterQuake.filter({ (data) -> Bool in
             return data.place.lowercased().contains(searchText.lowercased())
         }))
         tableView.reloadData()
- 
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        DataServices.sharedInstance.selectedQuake = filterQuake[indexPath.row]
+        
     }
 }

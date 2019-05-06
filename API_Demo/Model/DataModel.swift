@@ -37,13 +37,13 @@ class QuakeInfo {
         guard !url.isEmpty else {return nil}
         guard !detail.isEmpty else {return nil}
         
-                if place.contains(" of ") {
-                    let placeDetail = place.components(separatedBy: " of ")
-                    distainsString = (placeDetail.first ?? "") + " OF"
-                    locationName = placeDetail.last ?? ""
-                } else {
-                    self.distainsString = "NEAR THE"
-                    self.locationName = place
+        if place.contains(" of ") {
+            let placeDetail = place.components(separatedBy: " of ")
+            distainsString = (placeDetail.first ?? "") + " OF"
+            locationName = placeDetail.last ?? ""
+        } else {
+            self.distainsString = "NEAR THE"
+            self.locationName = place
         }
         
         let dataForMater = DateFormatter()
@@ -55,7 +55,7 @@ class QuakeInfo {
         
     }
     
-   convenience init?(dict: JSON) {
+    convenience init?(dict: JSON) {
         guard let mag = dict["mag"] as? Double else {return nil}
         guard let place = dict["place"] as? String else {return nil}
         guard let timeInterval = dict["time"] as? TimeInterval else {return nil}

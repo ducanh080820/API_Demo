@@ -112,7 +112,9 @@
                             <outlet property="delegate" destination="ZC8-eM-lxV" id="pAP-yh-A0S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quake Report" id="kY1-o9-5RX"/>
+                    <navigationItem key="navigationItem" title="Quake Report" id="kY1-o9-5RX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CAb-CK-5OF"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcc-P6-mBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +123,7 @@
         <!--Quake-->
         <scene sceneID="n36-J0-C5w">
             <objects>
-                <viewController id="sHz-0t-Jmd" customClass="DetaiViewController" customModule="API_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sHz-0t-Jmd" customClass="WebViewController" customModule="API_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eva-oE-BOz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.35298881160000001" green="1" blue="0.30804482890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zvf-1I-NJn" firstAttribute="bottom" secondItem="QGS-CC-rlW" secondAttribute="bottom" id="b7G-K9-PWT"/>
+                            <constraint firstAttribute="bottom" secondItem="QGS-CC-rlW" secondAttribute="bottom" id="b7G-K9-PWT"/>
                             <constraint firstItem="zvf-1I-NJn" firstAttribute="trailing" secondItem="QGS-CC-rlW" secondAttribute="trailing" id="inb-IC-Gl4"/>
                             <constraint firstItem="QGS-CC-rlW" firstAttribute="top" secondItem="zvf-1I-NJn" secondAttribute="top" id="qOX-pN-Nzd"/>
                             <constraint firstItem="QGS-CC-rlW" firstAttribute="leading" secondItem="zvf-1I-NJn" secondAttribute="leading" id="qgb-ew-U7e"/>
@@ -141,6 +143,7 @@
                         <viewLayoutGuide key="safeArea" id="zvf-1I-NJn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quake" id="Avx-If-P4n">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qvd-p4-ElD"/>
                         <barButtonItem key="rightBarButtonItem" title="Detail" id="2xj-JD-rSw">
                             <connections>
                                 <segue destination="g7O-NT-Vp6" kind="show" id="Jbv-An-eNp"/>
@@ -155,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1218" y="112"/>
         </scene>
-        <!--Summary Table View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="oW8-WF-zyt">
             <objects>
-                <tableViewController id="g7O-NT-Vp6" customClass="SummaryTableViewController" customModule="API_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="g7O-NT-Vp6" customClass="DetailTableViewController" customModule="API_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XZe-UL-BOk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
