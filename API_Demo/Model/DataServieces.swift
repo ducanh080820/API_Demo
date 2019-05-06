@@ -14,6 +14,16 @@ class DataServices {
     var quakeInfo: [QuakeInfo] = []
     var selectedQuake: QuakeInfo?
     
+    func convertCoodinate(latitude: String, longitude: String) -> (lat: String, long: String) {
+        var lati: String = "", longi: String = ""
+        if let latitudeDouble = Double(latitude) {
+            lati = String(format: "%.3f°%@", abs(latitudeDouble), latitudeDouble >= 0 ? "N" : "S") // kieu dinh dang, gia tri tuyet doi.
+        }
+        if let longitudeDouble = Double(longitude) {
+            longi = String(format: "%.3f°%@", abs(longitudeDouble), longitudeDouble >= 0 ? "N" : "S")
+        }
+        return (lati, longi)
+    }
     func makeDataTaskRequest(urlString: String, completeBlock:  @escaping (JSON) -> Void) {
         guard let url = URL(string: urlString) else {return}
         let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
@@ -39,14 +49,17 @@ class DataServices {
         makeDataTaskRequest(urlString: HOST) { [unowned self] json in
             guard let dictFeatures = json["features"] as? [JSON] else {return}
             for featuresJson in dictFeatures {
-                if let propertiesJson = featuresJson["properties"] as? JSON {
-                    if let quake = QuakeInfo(dict: propertiesJson) {
-                        self.quakeInfo.append(quake)
-                    }
-                }
+                guard let propertiesJson = featuresJson["properties"] as? JSON else { return }
+                guard let quake = QuakeInfo(dict: propertiesJson) else { return }
+                self.quakeInfo.append(quake)
             }
             completeHandler(self.quakeInfo)
         }
     }
-    
+    func loadDataDetail(from urlString: String, completionHandler: @escaping (QuakeDetail) -> Void) {
+        makeDataTaskRequest(urlString: urlString) { json in
+            let dictDet = json["properties"] as? JSON ?? [:]
+            completionHandler(QuakeDetail(dictionary: dictDet))
+        }
+    }
 }

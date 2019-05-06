@@ -9,7 +9,6 @@
 import Foundation
 
 enum SummaryQuake: Int {
-    case mag
     case cdi
     case mmi
     case alert
@@ -18,12 +17,9 @@ enum SummaryQuake: Int {
     case latitude
     case longitude
     case felt
-    case place
     
-    func needToShow(dataDetail: QuakeInfo?) -> Bool {
+    func needToShow(dataDetail: QuakeDetail?) -> Bool {
         switch self {
-        case .mag :
-            return dataDetail?.mag != nil
         case .cdi:
             return dataDetail?.cdi != nil
         case .mmi:
@@ -40,8 +36,6 @@ enum SummaryQuake: Int {
             return !checkStringNullOrEmpty(string: dataDetail?.longitude)
         case .felt:
             return dataDetail?.felt != nil
-        case .place:
-            return !checkStringNullOrEmpty(string: dataDetail?.distainsString) || !checkStringNullOrEmpty(string: dataDetail?.locationName)
         }
     }
     private func checkStringNullOrEmpty(string: String?) -> Bool {

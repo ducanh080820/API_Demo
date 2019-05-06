@@ -20,24 +20,25 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var feltLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     
-    var dataDetail : QuakeInfo?
+    var dataDetail : QuakeDetail!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     func setupUI() {
-        DataServices.sharedInstance.selectedQuake?.loadDataDetail { [unowned self] quakeInfo in
-            self.dataDetail = quakeInfo
-            self.magLabel.text = "Mag: \(quakeInfo.mag)"
-            self.cdiLabel.text = "Cdi: \(quakeInfo.cdi ?? 0)"
-            self.mmiLabel.text = "Mmi: \(quakeInfo.mmi ?? 0)"
-            self.alertLabel.text = "Alert: \(quakeInfo.alert ?? "")"
-            self.evenTimeLabel.text = "EventTime: \(quakeInfo.eventTime ?? "")"
-            self.depthLabel.text = "Depth: \(quakeInfo.depth ?? "")"
-            self.latitudeLabel.text = "Latitude: \(quakeInfo.latitude ?? "")"
-            self.longitudeLabel.text = "Longitude: \(quakeInfo.longitude ?? "")"
-            self.feltLabel.text = "Felt: \(quakeInfo.felt ?? 0)"
-            self.placeLabel.text = "Place: \(self.dataDetail!.distainsString) \(self.dataDetail!.locationName)"
+        guard let detailData = DataServices.sharedInstance.selectedQuake else { return }
+        DataServices.sharedInstance.loadDataDetail(from: detailData.detail) { detail in
+            self.dataDetail = detail
+            self.magLabel.text = "Mag: \(detailData.mag)"
+            self.cdiLabel.text = "Cdi: \(detail.cdi)"
+            self.mmiLabel.text = "Mmi: \(detail.mmi)"
+            self.alertLabel.text = "Alert: \(detail.alert)"
+            self.evenTimeLabel.text = "EventTime: \(detail.eventTime)"
+            self.depthLabel.text = "Depth: \(detail.depth)"
+            self.latitudeLabel.text = "Latitude: \(detail.latitude)"
+            self.longitudeLabel.text = "Longitude: \(detail.longitude)"
+            self.feltLabel.text = "Felt: \(detail.felt)"
+            self.placeLabel.text = "Place: \(detailData.distainsString) \(detailData.locationName)"
             self.tableView.reloadData()
         }
     }

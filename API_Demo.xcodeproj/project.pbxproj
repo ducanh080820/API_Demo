@@ -16,12 +16,13 @@
 		57C1028221B5F3BE005392B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C1028021B5F3BE005392B9 /* LaunchScreen.storyboard */; };
 		57C1A21621BA675E00E066A0 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1A21521BA675E00E066A0 /* DetailTableViewController.swift */; };
 		57CC284E21B6590200E01D04 /* DataServieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC284D21B6590200E01D04 /* DataServieces.swift */; };
-		57CC285321B6698B00E01D04 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC285221B6698B00E01D04 /* DataModel.swift */; };
+		57CC285321B6698B00E01D04 /* QuakeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC285221B6698B00E01D04 /* QuakeInfo.swift */; };
 		57CE432521B6085E00C9FF7C /* Custom Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE432421B6085E00C9FF7C /* Custom Label.swift */; };
 		57D60F5F21B90EE100D02D58 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D60F5E21B90EE100D02D58 /* WebViewController.swift */; };
 		57F8FECE21C20E73002C75A9 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8FECD21C20E73002C75A9 /* Tests.swift */; };
 		C2ECDA8822807FE6005E74D2 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA8722807FE6005E74D2 /* MasterTableViewCell.swift */; };
 		C2ECDA8B2280837D005E74D2 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA8A2280837D005E74D2 /* Enum.swift */; };
+		C2ECDA8F22808A86005E74D2 /* QuakeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA8E22808A86005E74D2 /* QuakeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 		57C1028121B5F3BE005392B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57C1A21521BA675E00E066A0 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		57CC284D21B6590200E01D04 /* DataServieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServieces.swift; sourceTree = "<group>"; };
-		57CC285221B6698B00E01D04 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataModel.swift; sourceTree = "<group>"; };
+		57CC285221B6698B00E01D04 /* QuakeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = QuakeInfo.swift; sourceTree = "<group>"; };
 		57CE432421B6085E00C9FF7C /* Custom Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Label.swift"; sourceTree = "<group>"; };
 		57D60F5E21B90EE100D02D58 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		57F8FECB21C20E73002C75A9 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +54,7 @@
 		57F8FECF21C20E73002C75A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2ECDA8722807FE6005E74D2 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		C2ECDA8A2280837D005E74D2 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		C2ECDA8E22808A86005E74D2 /* QuakeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,8 @@
 		57CC284F21B6681F00E01D04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				57CC285221B6698B00E01D04 /* DataModel.swift */,
+				57CC285221B6698B00E01D04 /* QuakeInfo.swift */,
+				C2ECDA8E22808A86005E74D2 /* QuakeDetail.swift */,
 				57CC284D21B6590200E01D04 /* DataServieces.swift */,
 				C2ECDA8A2280837D005E74D2 /* Enum.swift */,
 			);
@@ -254,7 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57CC285321B6698B00E01D04 /* DataModel.swift in Sources */,
+				C2ECDA8F22808A86005E74D2 /* QuakeDetail.swift in Sources */,
+				57CC285321B6698B00E01D04 /* QuakeInfo.swift in Sources */,
 				57CE432521B6085E00C9FF7C /* Custom Label.swift in Sources */,
 				57D60F5F21B90EE100D02D58 /* WebViewController.swift in Sources */,
 				57CC284E21B6590200E01D04 /* DataServieces.swift in Sources */,
